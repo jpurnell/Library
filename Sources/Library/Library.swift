@@ -20,8 +20,8 @@ public struct Media: Codable {
 }
 
 public struct ClassmateEntry: Codable {
-    var classmate: Classmate
-    var media: [Media]
+    public var classmate: Classmate
+    public var media: [Media]
     
     public static func fixture(_ classmate: Classmate = .fixture(), _ media: [Media] = [.fixture()]) -> ClassmateEntry {
         return ClassmateEntry(classmate: classmate, media: media)
@@ -29,7 +29,7 @@ public struct ClassmateEntry: Codable {
 }
 
 public struct Library: Codable {
-    var entries: [ClassmateEntry]
+    public var entries: [ClassmateEntry]
     
     public static func fixtures(_ entries: [ClassmateEntry] = [.fixture()]) -> Library {
         return Library(entries: entries)
