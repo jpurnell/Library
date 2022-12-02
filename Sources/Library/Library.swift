@@ -25,7 +25,7 @@ public struct Media: Codable, Comparable, Identifiable, Hashable {
     }
 }
 
-public struct ClassmateEntry: Codable, Comparable, Identifiable {
+public struct ClassmateEntry: Codable, Comparable, Identifiable, Hashable {
     
     public var id: UUID = UUID()
     public var classmate: Classmate
