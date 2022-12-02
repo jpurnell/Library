@@ -25,12 +25,22 @@ public struct Media: Codable, Comparable {
     }
 }
 
-public struct ClassmateEntry: Codable {
+public struct ClassmateEntry: Codable, Comparable, Identifiable {
+    
+    public var id: UUID = UUID()
     public var classmate: Classmate
     public var media: [Media]
     
     public static func fixture(_ classmate: Classmate = .fixture(), _ media: [Media] = [.fixture()]) -> ClassmateEntry {
         return ClassmateEntry(classmate: classmate, media: media)
+    }
+
+    public static func == (lhs: ClassmateEntry, rhs: ClassmateEntry) -> Bool {
+        return lhs.classmate == rhs.classmate
+    }
+
+    public static func < (lhs: ClassmateEntry, rhs: ClassmateEntry) -> Bool {
+        return lhs.classmate < rhs.classmate
     }
 }
 
