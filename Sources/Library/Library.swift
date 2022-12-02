@@ -14,7 +14,7 @@ public struct Media: Codable {
     public var description: String?
     public var links: [String: String]?
     
-    public static func fixture(_ title: String = "When Women Lead", _ image: String = "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982168216/when-women-lead-9781982168216_lg.jpg", _ description: String = LoremIpsum.text, _ links: [String: String] = ["Amazon": "https://www.amazon.com/exec/obidos/ASIN/1982168218?tag=simonsayscom", "Apple": "https://apple.com/music", "Barnes & Noble": "https://www.anrdoezrs.net/click-7567305-11819508?SID=simonsayscom&url=http://www.barnesandnoble.com/w/?ean=9781982168216", "BAM": "https://www.booksamillion.com/p/9781982168216", "Bookshop" : "https://bookshop.org/a/1688/9781982168216"]) -> Media {
+    public static func fixture(_ title: String = "When Women Lead", _ image: String = "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982168216/when-women-lead-9781982168216_xlg.jpg", _ description: String = LoremIpsum.text, _ links: [String: String] = ["Amazon": "https://www.amazon.com/exec/obidos/ASIN/1982168218?tag=simonsayscom", "Apple": "https://apple.com/music", "Barnes & Noble": "https://www.anrdoezrs.net/click-7567305-11819508?SID=simonsayscom&url=http://www.barnesandnoble.com/w/?ean=9781982168216", "BAM": "https://www.booksamillion.com/p/9781982168216", "Bookshop" : "https://bookshop.org/a/1688/9781982168216"]) -> Media {
         return Media(title: title, image: image, description: description, links: links)
     }
 }
