@@ -1,10 +1,10 @@
 import Classmate
 
 public struct Media: Codable {
-    let title: String
-    let image: String
-    let description: String?
-    let links: [String: String]?
+    public var title: String
+    public var image: String
+    public var description: String?
+    public var links: [String: String]?
     
     public static func fixture(_ title: String = "Media Title", _ image: String = "", _ description: String = "Media Description", _ links: [String: String] = ["Amazon": "https://www.amazon.com/link", "Apple": "https://apple.com/music"]) -> Media {
         return Media(title: title, image: image, description: description, links: links)
