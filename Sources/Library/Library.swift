@@ -1,4 +1,5 @@
 import Classmate
+import Foundation
 
 public struct LoremIpsum: Codable {
    public static var text: String = """
@@ -8,7 +9,12 @@ Julia Boorstin was thirteen when her mother told her that, by the time she grew 
 """
 }
 
-public struct Media: Codable {
+public struct Media: Codable, Comparable {
+    public static func < (lhs: Media, rhs: Media) -> Bool {
+        return lhs.title < rhs.title && lhs.description ?? "" < rhs.description ?? ""
+    }
+    
+    public var id: UUID = UUID()
     public var title: String
     public var image: String
     public var description: String?
