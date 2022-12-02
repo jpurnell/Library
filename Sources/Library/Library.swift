@@ -9,7 +9,7 @@ Julia Boorstin was thirteen when her mother told her that, by the time she grew 
 """
 }
 
-public struct Media: Codable, Comparable {
+public struct Media: Codable, Comparable, Identifiable {
     public static func < (lhs: Media, rhs: Media) -> Bool {
         return lhs.title < rhs.title && lhs.description ?? "" < rhs.description ?? ""
     }
