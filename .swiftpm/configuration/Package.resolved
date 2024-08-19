@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "classmate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jpurnell/classmate",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e703641833a1bc9618d5924c9a2eee91091c744e"
+      }
+    }
+  ],
+  "version" : 2
+}
